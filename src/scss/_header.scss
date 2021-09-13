@@ -1,0 +1,97 @@
+@import "variables";
+@import "mixin";
+
+.mobile-menu-navigation {
+  position: absolute;
+  z-index: 25;
+  top: 0;
+  right: 200%;
+  width: 416px;
+  transition: all .25s ease;
+
+  .navigation {
+    display: block;
+    padding: 50px;
+    background: $dark-green;
+    min-height: 100vh;
+
+    li {
+      position: relative;
+      margin-bottom: 0;
+      text-align: right;
+
+      a {
+        font-weight: 400;
+        line-height: 40px;
+        color: $light-swampy;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.show-menu {
+  right: 0;
+}
+
+.btn-menu {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  height: 35px;
+  width: 18px;
+  cursor: pointer;
+  transition: all .25s ease;
+  z-index: 103;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -10px;
+    right: -10px;
+    bottom: -7px;
+    background: $light-gray;
+    z-index: -1;
+    border-radius: 50%;
+  }
+
+  span {
+    background: $dark;
+    border: none;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    transition: all .35s ease;
+    cursor: pointer;
+  }
+
+  .middle {
+    top: 22px;
+  }
+
+  .bottom {
+    top: 28px;
+  }
+
+  &.active {
+    .top {
+      transform: translateY(8px) translateX(0) rotate(45deg);
+      top: 14px;
+    }
+
+    .middle {
+      opacity: 0;
+    }
+
+    .bottom {
+      top: 30px;
+      transform: translateY(-8px) translateX(0) rotate(-45deg);
+    }
+  }
+}
