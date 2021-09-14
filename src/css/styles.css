@@ -105,6 +105,15 @@ h6 {
   padding: 26px 29px 22px 33px;
   border-radius: 50px; }
 
+.btn-form {
+  font-family: 'El Messiri', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 27px;
+  color: #000000;
+  border: 1px solid #C0C5E1;
+  padding: 19px 61px 12px 52px; }
+
 .mobile-menu-navigation {
   position: absolute;
   z-index: 25;
@@ -276,7 +285,7 @@ h6 {
 
 .about-me-content {
   margin-bottom: 120px;
-  padding: 0 75px; }
+  padding: 0 74px; }
 
 .service-list {
   display: flex;
@@ -292,7 +301,8 @@ h6 {
     bottom: 0;
     left: 0;
     background: rgba(174, 181, 217, 0.42);
-    filter: blur(70px); }
+    filter: blur(70px);
+    z-index: -1; }
   .service-list li {
     width: 25%; }
     .service-list li a {
@@ -303,6 +313,77 @@ h6 {
       justify-content: space-between; }
       .service-list li a img {
         width: 60px; }
+    .service-list li:hover {
+      cursor: pointer; }
+
+.communication {
+  margin-bottom: 45px; }
+  .communication .title {
+    margin-bottom: 25px; }
+  .communication p {
+    text-align: center;
+    font-size: 15px;
+    line-height: 24px;
+    color: #000000;
+    margin-bottom: 170px; }
+  .communication .socials li {
+    margin: 0 37px; }
+    .communication .socials li .icon::before {
+      background: #F6F7FA;
+      top: -26px;
+      left: -14px;
+      width: 60px;
+      height: 60px; }
+    .communication .socials li .icon:hover::before {
+      background: #d0d3db; }
+
+.form-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(95, 108, 179, 0.56);
+  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 113px 38px;
+  margin-bottom: 22px; }
+  .form-area .form-group {
+    width: 295px; }
+    .form-area .form-group input {
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid #C0C5E1;
+      height: 60px;
+      width: 100%;
+      padding: 13px 15px; }
+      .form-area .form-group input::placeholder {
+        font-family: 'El Messiri', sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 17px;
+        color: rgba(0, 0, 0, 0.6); }
+
+.footer {
+  padding: 55px 0;
+  background: linear-gradient(103.82deg, #0A1F8B -20.79%, rgba(198, 202, 228, 0) 174.26%);
+  filter: drop-shadow(0px 4px 40px rgba(0, 0, 0, 0.25)); }
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .footer-content .contacts {
+    display: flex;
+    align-items: center; }
+    .footer-content .contacts p {
+      font-size: 24px;
+      line-height: 38px;
+      color: #000000;
+      padding-right: 38px;
+      flex-wrap: wrap; }
+    .footer-content .contacts a {
+      font-size: 18px;
+      line-height: 29px;
+      color: #000000; }
 
 .z-index_10 {
   position: relative;
@@ -310,3 +391,14 @@ h6 {
 
 .fz_28 i {
   font-size: 28px; }
+
+.fz_36 i {
+  font-size: 36px; }
+
+.input_sm {
+  width: 192px !important; }
+
+.display_flex {
+  display: flex;
+  flex-direction: inherit;
+  justify-content: center; }

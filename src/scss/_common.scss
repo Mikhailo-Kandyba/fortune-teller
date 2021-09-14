@@ -152,7 +152,7 @@
 
 .about-me-content {
   margin-bottom: 120px;
-  padding: 0 75px;
+  padding: 0 74px;
 }
 
 .service-list {
@@ -171,6 +171,7 @@
     left: 0;
     background: rgba(174, 181, 217, 0.42);
     filter: blur(70px);
+    z-index: -1;
   }
 
   li {
@@ -186,6 +187,111 @@
       img {
         width: 60px;
       }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.communication {
+  margin-bottom: 45px;
+
+  .title {
+    margin-bottom: 25px;
+  }
+
+  p {
+    text-align: center;
+    font-size: 15px;
+    line-height: 24px;
+    color: $dark-two;
+    margin-bottom: 170px;
+  }
+
+  .socials {
+    li {
+      margin: 0 37px;
+
+      .icon {
+        &::before {
+          background: $lactic;
+          top: -26px;
+          left: -14px;
+          width: 60px;
+          height: 60px;
+        }
+
+        &:hover {
+          &::before {
+            background: $silver;
+          }
+        }
+      }
+    }
+  }
+}
+
+.form-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(95, 108, 179, 0.56);
+  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 113px 38px;
+  margin-bottom: 22px;
+
+  .form-group {
+    width: 295px;
+
+    input {
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid $purple;
+      height: 60px;
+      width: 100%;
+      padding: 13px 15px;
+
+      &::placeholder {
+        font-family: 'El Messiri', sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 17px;
+        color: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+}
+
+.footer {
+  padding: 55px 0;
+  background: linear-gradient(103.82deg, #0A1F8B -20.79%, rgba(198, 202, 228, 0) 174.26%);
+  filter: drop-shadow(0px 4px 40px rgba(0, 0, 0, 0.25));
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .contacts {
+    display: flex;
+    align-items: center;
+
+    p {
+      font-size: 24px;
+      line-height: 38px;
+      color: $dark-two;
+      padding-right: 38px;
+      flex-wrap: wrap;
+    }
+
+    a {
+      font-size: 18px;
+      line-height: 29px;
+      color: $dark-two;
     }
   }
 }
