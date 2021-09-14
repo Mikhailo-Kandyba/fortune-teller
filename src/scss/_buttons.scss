@@ -4,6 +4,10 @@
 .btn {
   padding: 26px 29px 22px 33px;
   border-radius: 50px;
+
+  @include breakpoint($tablet) {
+    padding: 15px 15px 9px 15px;
+  }
 }
 
 .btn-form {
@@ -14,4 +18,13 @@
   color: $dark-two;
   border: 1px solid $purple;
   padding: 19px 61px 12px 52px;
+
+  @include breakpoint($tablet) {
+    padding: 18px 90px 14px 90px;
+  }
+
+  @include breakpoint($mobile) {
+    width: 100%;
+    padding: 18px 10px 14px 10px;
+  }
 }

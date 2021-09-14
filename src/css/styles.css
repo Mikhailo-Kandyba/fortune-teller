@@ -71,6 +71,10 @@ button {
   color: #000;
   font-size: 24px;
   line-height: 38px; }
+  @media only screen and (max-width: 767px) {
+    button {
+      font-size: 18px;
+      line-height: 25px; } }
   button:focus {
     outline: none; }
   button:hover {
@@ -104,6 +108,9 @@ h6 {
 .btn {
   padding: 26px 29px 22px 33px;
   border-radius: 50px; }
+  @media only screen and (max-width: 1023px) {
+    .btn {
+      padding: 15px 15px 9px 15px; } }
 
 .btn-form {
   font-family: 'El Messiri', sans-serif;
@@ -113,27 +120,38 @@ h6 {
   color: #000;
   border: 1px solid #C0C5E1;
   padding: 19px 61px 12px 52px; }
+  @media only screen and (max-width: 1023px) {
+    .btn-form {
+      padding: 18px 90px 14px 90px; } }
+  @media only screen and (max-width: 767px) {
+    .btn-form {
+      width: 100%;
+      padding: 18px 10px 14px 10px; } }
 
 .mobile-menu-navigation {
-  position: absolute;
+  position: fixed;
   z-index: 25;
   top: 0;
   right: 200%;
-  width: 416px;
+  width: 100%;
   transition: all .25s ease; }
   .mobile-menu-navigation .navigation {
     display: block;
-    padding: 50px;
+    padding: 80px 40px;
+    background: #5A68B1;
     min-height: 100vh; }
     .mobile-menu-navigation .navigation li {
       position: relative;
-      margin-bottom: 0;
-      text-align: right; }
-      .mobile-menu-navigation .navigation li a {
-        font-weight: 400;
-        line-height: 40px; }
-        .mobile-menu-navigation .navigation li a:hover {
-          text-decoration: none; }
+      text-align: center;
+      margin-bottom: 30px; }
+    @media only screen and (max-width: 767px) {
+      .mobile-menu-navigation .navigation .phone-item {
+        padding: 20px 0;
+        border-top: solid 1px #000;
+        border-bottom: solid 1px #000; } }
+  @media only screen and (max-width: 767px) {
+    .mobile-menu-navigation .holder-phone {
+      display: block; } }
 
 .show-menu {
   right: 0; }
@@ -142,12 +160,15 @@ h6 {
   display: none;
   position: absolute;
   top: 0;
-  right: 10px;
+  right: 0;
   height: 35px;
-  width: 18px;
+  width: 28px;
   cursor: pointer;
   transition: all .25s ease;
   z-index: 103; }
+  @media only screen and (max-width: 767px) {
+    .btn-menu {
+      display: block; } }
   .btn-menu::before {
     content: "";
     position: absolute;
@@ -158,6 +179,7 @@ h6 {
     z-index: -1;
     border-radius: 50%; }
   .btn-menu span {
+    background: #000;
     border: none;
     height: 2px;
     width: 100%;
@@ -181,21 +203,46 @@ h6 {
 
 .header {
   padding: 60px 0; }
+  @media only screen and (max-width: 1023px) {
+    .header {
+      padding: 20px 0; } }
 
 .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 75px 0 0; }
+  @media only screen and (max-width: 1115px) {
+    .header-content {
+      padding: 0; } }
+  @media only screen and (max-width: 767px) {
+    .header-content {
+      position: relative; } }
 
 .logo img {
   width: 70px; }
+  @media only screen and (max-width: 767px) {
+    .logo img {
+      width: 45px; } }
+
+@media only screen and (max-width: 767px) {
+  .holder-phone {
+    display: none; } }
 
 .menu-navigation {
   display: flex;
   padding-left: 92px; }
+  @media only screen and (max-width: 1115px) {
+    .menu-navigation {
+      padding: 0; } }
+  @media only screen and (max-width: 767px) {
+    .menu-navigation {
+      display: none; } }
   .menu-navigation li {
     padding: 0 70px; }
+    @media only screen and (max-width: 1023px) {
+      .menu-navigation li {
+        padding: 0 30px; } }
     .menu-navigation li a {
       font-weight: 500;
       line-height: 27px; }
@@ -230,19 +277,46 @@ h6 {
   background: linear-gradient(87.7deg, #0A1F8B -52.14%, rgba(10, 31, 139, 0) 125.08%);
   margin-top: -205px;
   margin-bottom: 60px; }
+  @media only screen and (max-width: 1023px) {
+    .banner {
+      margin-top: -125px;
+      margin-bottom: 40px; } }
+  @media only screen and (max-width: 767px) {
+    .banner {
+      margin-top: -155px; } }
 
 .banner-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   padding: 140px 15px 20px; }
+  @media only screen and (max-width: 1115px) {
+    .banner-content {
+      padding: 140px 25px 20px; } }
+  @media only screen and (max-width: 1115px) {
+    .banner-content img {
+      width: 450px; } }
+  @media only screen and (max-width: 1023px) {
+    .banner-content img {
+      width: 250px; } }
+  @media only screen and (max-width: 767px) {
+    .banner-content img {
+      display: none; } }
   .banner-content .title {
     text-align: left;
     margin-bottom: 107px; }
+    @media only screen and (max-width: 1023px) {
+      .banner-content .title {
+        margin-bottom: 40px; } }
     .banner-content .title .title__text {
       font-size: 64px;
       line-height: 80px;
       margin-bottom: 32px; }
+      @media only screen and (max-width: 767px) {
+        .banner-content .title .title__text {
+          font-size: 35px;
+          line-height: 40px;
+          margin-bottom: 18px; } }
 
 .title {
   text-align: center; }
@@ -254,6 +328,10 @@ h6 {
     font-size: 50px;
     line-height: 63px;
     margin-bottom: 10px; }
+    @media only screen and (max-width: 767px) {
+      .title .title__text {
+        font-size: 35px;
+        line-height: 40px; } }
   .title .title__subtitle {
     font-weight: 400;
     color: #1B1B1B; }
@@ -263,6 +341,9 @@ h6 {
   align-items: center;
   flex-direction: column;
   margin-right: 35px; }
+  @media only screen and (max-width: 767px) {
+    .socials-area {
+      margin-right: 20px; } }
   .socials-area .line {
     display: block;
     width: 1.5px;
@@ -282,18 +363,39 @@ h6 {
 
 .about-me {
   margin-bottom: 175px; }
+  @media only screen and (max-width: 1023px) {
+    .about-me {
+      margin-bottom: 125px; } }
+  @media only screen and (max-width: 767px) {
+    .about-me {
+      margin-bottom: 55px; } }
   .about-me .title .title__text {
     line-height: 80px;
     margin-bottom: 0; }
+    @media only screen and (max-width: 767px) {
+      .about-me .title .title__text {
+        font-size: 35px;
+        line-height: 40px; } }
 
 .about-me-content {
   margin-bottom: 120px;
   padding: 0 74px; }
+  @media only screen and (max-width: 1023px) {
+    .about-me-content {
+      padding: 0; } }
+  @media only screen and (max-width: 767px) {
+    .about-me-content {
+      margin-bottom: 40px; } }
   .about-me-content h3 {
     font-weight: 400;
     font-size: 36px;
     line-height: 80px;
     margin-bottom: 5px; }
+    @media only screen and (max-width: 767px) {
+      .about-me-content h3 {
+        font-size: 25px;
+        line-height: 40px;
+        margin-bottom: 0; } }
   .about-me-content p {
     margin-bottom: 25px; }
 
@@ -303,6 +405,9 @@ h6 {
   align-items: center;
   flex-wrap: wrap;
   position: relative; }
+  @media only screen and (max-width: 767px) {
+    .service-list {
+      flex-direction: column; } }
   .service-list::after {
     content: "";
     position: absolute;
@@ -313,14 +418,25 @@ h6 {
     background: rgba(174, 181, 217, 0.42);
     filter: blur(70px);
     z-index: -1; }
+    @media only screen and (max-width: 767px) {
+      .service-list::after {
+        top: -30px;
+        bottom: -20px; } }
   .service-list li {
     width: 25%; }
+    @media only screen and (max-width: 767px) {
+      .service-list li {
+        width: 100%;
+        margin-bottom: 30px; } }
     .service-list li a {
       display: flex;
       flex-direction: column;
       align-items: center;
       min-height: 115px;
       justify-content: space-between; }
+      @media only screen and (max-width: 767px) {
+        .service-list li a {
+          min-height: 100px; } }
       .service-list li a img {
         width: 60px; }
       .service-list li a span {
@@ -332,6 +448,9 @@ h6 {
   margin-bottom: 30px; }
   .my-help .title {
     margin-bottom: 60px; }
+    @media only screen and (max-width: 767px) {
+      .my-help .title {
+        margin-bottom: 20px; } }
 
 .help-list {
   display: flex;
@@ -339,6 +458,9 @@ h6 {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 -60px; }
+  @media only screen and (max-width: 767px) {
+    .help-list {
+      margin: 0; } }
   .help-list .item {
     background: #F1F2F8;
     border-radius: 10px;
@@ -347,6 +469,14 @@ h6 {
     padding: 32px 15px;
     margin: 0 65px 65px;
     position: relative; }
+    @media only screen and (max-width: 1023px) {
+      .help-list .item {
+        margin: 0 64px 65px; } }
+    @media only screen and (max-width: 767px) {
+      .help-list .item {
+        max-width: 100%;
+        margin: 0 0 50px;
+        min-height: inherit; } }
     .help-list .item::after {
       content: "";
       position: absolute;
@@ -356,6 +486,9 @@ h6 {
       background-image: url("../images/hand.svg");
       width: 143px;
       height: 137px; }
+      @media only screen and (max-width: 767px) {
+        .help-list .item::after {
+          display: none; } }
     .help-list .item h4 {
       font-weight: 600;
       font-size: 26px;
@@ -364,9 +497,20 @@ h6 {
       margin-bottom: 16px; }
     .help-list .item p {
       padding: 0 20px; }
+      @media only screen and (max-width: 767px) {
+        .help-list .item p {
+          padding: 0; } }
   .help-list .item:nth-child(3)::after,
   .help-list :nth-child(5)::after {
     display: none; }
+    @media only screen and (max-width: 1115px) {
+      .help-list .item:nth-child(3)::after,
+      .help-list :nth-child(5)::after {
+        display: block; } }
+  @media only screen and (max-width: 1023px) {
+    .help-list .item:nth-child(2)::after,
+    .help-list :nth-child(4)::after {
+      display: none; } }
 
 .communication {
   margin-bottom: 45px; }
@@ -376,12 +520,21 @@ h6 {
       font-weight: 500;
       line-height: 27px;
       color: #000; }
+      @media only screen and (max-width: 767px) {
+        .communication .title .title__subtitle {
+          font-size: 16px; } }
   .communication p {
     text-align: center;
     font-size: 15px;
     line-height: 24px;
     color: #000;
     margin-bottom: 165px; }
+    @media only screen and (max-width: 1023px) {
+      .communication p {
+        margin-bottom: 65px; } }
+    @media only screen and (max-width: 767px) {
+      .communication p {
+        margin-bottom: 25px; } }
   .communication .socials li {
     margin: 0 37px; }
     .communication .socials li .icon::before {
@@ -392,6 +545,8 @@ h6 {
       height: 60px; }
     .communication .socials li .icon:hover::before {
       background: #d0d3db; }
+  .communication .socials li:nth-child(2) .icon::before {
+    left: -18px; }
 
 .form-area {
   display: flex;
@@ -403,8 +558,19 @@ h6 {
   border-radius: 10px;
   padding: 113px 38px;
   margin-bottom: 22px; }
+  @media only screen and (max-width: 1023px) {
+    .form-area {
+      flex-direction: column;
+      padding: 30px; } }
   .form-area .form-group {
     width: 295px; }
+    @media only screen and (max-width: 1115px) {
+      .form-area .form-group {
+        width: 220px; } }
+    @media only screen and (max-width: 1023px) {
+      .form-area .form-group {
+        width: 100%;
+        margin-bottom: 30px; } }
     .form-area .form-group input {
       background: rgba(255, 255, 255, 0.8);
       border: 1px solid #C0C5E1;
@@ -423,19 +589,34 @@ h6 {
   padding: 45px 0;
   background: linear-gradient(103.82deg, #0A1F8B -20.79%, rgba(198, 202, 228, 0) 174.26%);
   filter: drop-shadow(0px 4px 40px rgba(0, 0, 0, 0.25)); }
+  @media only screen and (max-width: 767px) {
+    .footer {
+      padding: 15px 0; } }
 
 .footer-content {
   display: flex;
   align-items: center;
   justify-content: space-between; }
+  @media only screen and (max-width: 767px) {
+    .footer-content {
+      flex-direction: column; } }
   .footer-content .contacts {
     display: flex;
     align-items: center; }
+    @media only screen and (max-width: 767px) {
+      .footer-content .contacts {
+        justify-content: space-between;
+        width: 100%; } }
     .footer-content .contacts p {
       font-size: 24px;
       line-height: 38px;
       color: #000;
       padding-right: 38px; }
+      @media only screen and (max-width: 767px) {
+        .footer-content .contacts p {
+          font-size: 22px;
+          line-height: 30px;
+          padding-right: 0; } }
     .footer-content .contacts a {
       font-size: 18px;
       line-height: 29px;
@@ -456,6 +637,9 @@ h6 {
 
 .input_sm {
   width: 192px !important; }
+  @media only screen and (max-width: 1023px) {
+    .input_sm {
+      width: 100% !important; } }
 
 .display_flex {
   display: flex;

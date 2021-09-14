@@ -2,33 +2,37 @@
 @import "mixin";
 
 .mobile-menu-navigation {
-  position: absolute;
+  position: fixed;
   z-index: 25;
   top: 0;
   right: 200%;
-  width: 416px;
+  width: 100%;
   transition: all .25s ease;
 
   .navigation {
     display: block;
-    padding: 50px;
-    //background: $dark-green;
+    padding: 80px 40px;
+    background: $blue;
     min-height: 100vh;
 
     li {
       position: relative;
-      margin-bottom: 0;
-      text-align: right;
+      text-align: center;
+      margin-bottom: 30px;
+    }
 
-      a {
-        font-weight: 400;
-        line-height: 40px;
-        //color: $light-swampy;
-
-        &:hover {
-          text-decoration: none;
-        }
+    .phone-item {
+      @include breakpoint($mobile) {
+        padding: 20px 0;
+        border-top: solid 1px $dark-two;
+        border-bottom: solid 1px $dark-two;
       }
+    }
+  }
+
+  .holder-phone {
+    @include breakpoint($mobile) {
+      display: block;
     }
   }
 }
@@ -41,12 +45,16 @@
   display: none;
   position: absolute;
   top: 0;
-  right: 10px;
+  right: 0;
   height: 35px;
-  width: 18px;
+  width: 28px;
   cursor: pointer;
   transition: all .25s ease;
   z-index: 103;
+
+  @include breakpoint($mobile) {
+    display: block;
+  }
 
   &::before {
     content: "";
@@ -61,7 +69,7 @@
   }
 
   span {
-    //background: $dark;
+    background: $dark-two;
     border: none;
     height: 2px;
     width: 100%;

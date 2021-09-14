@@ -3,6 +3,10 @@
 
 .header {
   padding: 60px 0;
+
+  @include breakpoint($tablet) {
+    padding: 20px 0;
+  }
 }
 
 .header-content {
@@ -10,11 +14,29 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 75px 0 0;
+
+  @include breakpoint($desktop) {
+    padding: 0;
+  }
+
+  @include breakpoint($mobile) {
+    position: relative;
+  }
 }
 
 .logo {
   img {
     width: 70px;
+
+    @include breakpoint($mobile) {
+      width: 45px;
+    }
+  }
+}
+
+.holder-phone {
+  @include breakpoint($mobile) {
+    display: none;
   }
 }
 
@@ -22,8 +44,20 @@
   display: flex;
   padding-left: 92px;
 
+  @include breakpoint($desktop) {
+    padding: 0;
+  }
+
+  @include breakpoint($mobile) {
+    display: none;
+  }
+
   li {
     padding: 0 70px;
+
+    @include breakpoint($tablet) {
+      padding: 0 30px;
+    }
 
     a {
       font-weight: 500;
@@ -70,6 +104,16 @@
   background: linear-gradient(87.7deg, #0A1F8B -52.14%, rgba(10, 31, 139, 0) 125.08%);
   margin-top: -205px;
   margin-bottom: 60px;
+
+  @include breakpoint($tablet) {
+    margin-top: -125px;
+    margin-bottom: 40px;
+
+  }
+
+  @include breakpoint($mobile) {
+    margin-top: -155px;
+  }
 }
 
 .banner-content {
@@ -78,14 +122,42 @@
   align-items: flex-start;
   padding: 140px 15px 20px;
 
+  @include breakpoint($desktop) {
+    padding: 140px 25px 20px;
+  }
+
+  img {
+    @include breakpoint($desktop) {
+      width: 450px;
+    }
+
+    @include breakpoint($tablet) {
+      width: 250px;
+    }
+
+    @include breakpoint($mobile) {
+      display: none;
+    }
+  }
+
   .title {
     text-align: left;
     margin-bottom: 107px;
+
+    @include breakpoint($tablet) {
+      margin-bottom: 40px;
+    }
 
     .title__text {
       font-size: 64px;
       line-height: 80px;
       margin-bottom: 32px;
+
+      @include breakpoint($mobile) {
+        font-size: 35px;
+        line-height: 40px;
+        margin-bottom: 18px;
+      }
     }
   }
 }
@@ -102,6 +174,11 @@
     font-size: 50px;
     line-height: 63px;
     margin-bottom: 10px;
+
+    @include breakpoint($mobile) {
+      font-size: 35px;
+      line-height: 40px;
+    }
   }
 
   .title__subtitle {
@@ -115,6 +192,10 @@
   align-items: center;
   flex-direction: column;
   margin-right: 35px;
+
+  @include breakpoint($mobile) {
+    margin-right: 20px;
+  }
 
   .line {
     display: block;
@@ -148,10 +229,23 @@
 .about-me {
   margin-bottom: 175px;
 
+  @include breakpoint($tablet) {
+    margin-bottom: 125px;
+  }
+
+  @include breakpoint($mobile) {
+    margin-bottom: 55px;
+  }
+
   .title {
     .title__text {
       line-height: 80px;
       margin-bottom: 0;
+
+      @include breakpoint($mobile) {
+        font-size: 35px;
+        line-height: 40px;
+      }
     }
   }
 }
@@ -160,11 +254,25 @@
   margin-bottom: 120px;
   padding: 0 74px;
 
+  @include breakpoint($tablet) {
+    padding: 0;
+  }
+
+  @include breakpoint($mobile) {
+    margin-bottom: 40px;
+  }
+
   h3 {
     font-weight: 400;
     font-size: 36px;
     line-height: 80px;
     margin-bottom: 5px;
+
+    @include breakpoint($mobile) {
+      font-size: 25px;
+      line-height: 40px;
+      margin-bottom: 0;
+    }
   }
 
   p {
@@ -179,6 +287,10 @@
   flex-wrap: wrap;
   position: relative;
 
+  @include breakpoint($mobile) {
+    flex-direction: column;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -189,10 +301,20 @@
     background: rgba(174, 181, 217, 0.42);
     filter: blur(70px);
     z-index: -1;
+
+    @include breakpoint($mobile) {
+      top: -30px;
+      bottom: -20px;
+    }
   }
 
   li {
     width: 25%;
+
+    @include breakpoint($mobile) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
 
     a {
       display: flex;
@@ -200,6 +322,10 @@
       align-items: center;
       min-height: 115px;
       justify-content: space-between;
+
+      @include breakpoint($mobile) {
+        min-height: 100px;
+      }
 
       img {
         width: 60px;
@@ -220,6 +346,10 @@
   margin-bottom: 30px;
   .title {
     margin-bottom: 60px;
+
+    @include breakpoint($mobile) {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -230,6 +360,10 @@
   justify-content: center;
   margin: 0 -60px;
 
+  @include breakpoint($mobile) {
+    margin: 0;
+  }
+
   .item {
     background: $dark-grey;
     border-radius: 10px;
@@ -238,6 +372,16 @@
     padding: 32px 15px;
     margin: 0 65px 65px;
     position: relative;
+
+    @include breakpoint($tablet) {
+      margin: 0 64px 65px;
+    }
+
+    @include breakpoint($mobile) {
+      max-width: 100%;
+      margin: 0 0 50px;
+      min-height: inherit;
+    }
 
     &::after {
       content: "";
@@ -248,6 +392,10 @@
       background-image: url("../images/hand.svg");
       width: 143px;
       height: 137px;
+
+      @include breakpoint($mobile) {
+        display: none;
+      }
     }
 
     h4 {
@@ -260,6 +408,10 @@
 
     p {
       padding: 0 20px;
+
+      @include breakpoint($mobile) {
+        padding: 0;
+      }
     }
   }
 
@@ -267,6 +419,19 @@
   :nth-child(5) {
     &::after {
       display: none;
+
+      @include breakpoint($desktop) {
+        display: block;
+      }
+    }
+  }
+
+  .item:nth-child(2),
+  :nth-child(4) {
+    &::after {
+      @include breakpoint($tablet) {
+        display: none;
+      }
     }
   }
 }
@@ -281,6 +446,10 @@
       font-weight: 500;
       line-height: 27px;
       color: $dark-two;
+
+      @include breakpoint($mobile) {
+        font-size: 16px;
+      }
     }
   }
 
@@ -290,6 +459,14 @@
     line-height: 24px;
     color: $dark-two;
     margin-bottom: 165px;
+
+    @include breakpoint($tablet) {
+      margin-bottom: 65px;
+    }
+
+    @include breakpoint($mobile) {
+      margin-bottom: 25px;
+    }
   }
 
   .socials {
@@ -312,6 +489,14 @@
         }
       }
     }
+
+    li:nth-child(2) {
+        .icon {
+          &::before {
+            left: -18px;
+          }
+        }
+      }
   }
 }
 
@@ -326,8 +511,22 @@
   padding: 113px 38px;
   margin-bottom: 22px;
 
+  @include breakpoint($tablet) {
+    flex-direction: column;
+    padding: 30px;
+  }
+
   .form-group {
     width: 295px;
+
+    @include breakpoint($desktop) {
+      width: 220px;
+    }
+
+    @include breakpoint($tablet) {
+      width: 100%;
+      margin-bottom: 30px;
+    }
 
     input {
       background: rgba(255, 255, 255, 0.8);
@@ -352,6 +551,10 @@
   padding: 45px 0;
   background: linear-gradient(103.82deg, #0A1F8B -20.79%, rgba(198, 202, 228, 0) 174.26%);
   filter: drop-shadow(0px 4px 40px rgba(0, 0, 0, 0.25));
+
+  @include breakpoint($mobile) {
+    padding: 15px 0;
+  }
 }
 
 .footer-content {
@@ -359,15 +562,30 @@
   align-items: center;
   justify-content: space-between;
 
+  @include breakpoint($mobile) {
+    flex-direction: column;
+  }
+
   .contacts {
     display: flex;
     align-items: center;
+
+    @include breakpoint($mobile) {
+      justify-content: space-between;
+      width: 100%;
+    }
 
     p {
       font-size: 24px;
       line-height: 38px;
       color: $dark-two;
       padding-right: 38px;
+
+      @include breakpoint($mobile) {
+        font-size: 22px;
+        line-height: 30px;
+        padding-right: 0;
+      }
     }
 
     a {

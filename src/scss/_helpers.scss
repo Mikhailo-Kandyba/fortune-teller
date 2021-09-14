@@ -1,3 +1,5 @@
+@import "mixin";
+
 .z-index_10 {
   position: relative;
   z-index: 10;
@@ -22,7 +24,11 @@
 }
 
 .input_sm {
-  width: 192px!important;
+  width: 192px !important;
+
+  @include breakpoint($tablet) {
+    width: 100% !important;
+  }
 }
 
 .display_flex {
