@@ -43,6 +43,7 @@
 .menu-navigation {
   display: flex;
   padding-left: 92px;
+  flex-wrap: wrap;
 
   @include breakpoint($desktop) {
     padding: 0;
@@ -333,6 +334,7 @@
 
       span {
         color: $dark-two;
+        text-align: center;
       }
     }
 
@@ -561,6 +563,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   @include breakpoint($mobile) {
     flex-direction: column;

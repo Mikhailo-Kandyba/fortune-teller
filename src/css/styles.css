@@ -231,7 +231,8 @@ h6 {
 
 .menu-navigation {
   display: flex;
-  padding-left: 92px; }
+  padding-left: 92px;
+  flex-wrap: wrap; }
   @media only screen and (max-width: 1115px) {
     .menu-navigation {
       padding: 0; } }
@@ -440,7 +441,8 @@ h6 {
       .service-list li a img {
         width: 60px; }
       .service-list li a span {
-        color: #000; }
+        color: #000;
+        text-align: center; }
     .service-list li:hover {
       cursor: pointer; }
 
@@ -596,7 +598,8 @@ h6 {
 .footer-content {
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  flex-wrap: wrap; }
   @media only screen and (max-width: 767px) {
     .footer-content {
       flex-direction: column; } }
