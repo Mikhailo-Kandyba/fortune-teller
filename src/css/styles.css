@@ -274,14 +274,15 @@ h6 {
 .socials li:nth-child(2) .icon::before {
   left: -12px; }
 
-.about-me h3 {
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 80px;
-  margin-bottom: 5px; }
-
-.about-me p {
-  margin-bottom: 25px; }
+.about-me {
+  margin-bottom: 175px; }
+  .about-me h3 {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 80px;
+    margin-bottom: 5px; }
+  .about-me p {
+    margin-bottom: 25px; }
 
 .about-me-content {
   margin-bottom: 120px;
@@ -296,9 +297,9 @@ h6 {
   .service-list::after {
     content: "";
     position: absolute;
-    top: 0;
+    top: -50px;
     right: 0;
-    bottom: 0;
+    bottom: -50px;
     left: 0;
     background: rgba(174, 181, 217, 0.42);
     filter: blur(70px);
@@ -325,7 +326,7 @@ h6 {
     font-size: 15px;
     line-height: 24px;
     color: #000000;
-    margin-bottom: 170px; }
+    margin-bottom: 165px; }
   .communication .socials li {
     margin: 0 37px; }
     .communication .socials li .icon::before {
@@ -363,7 +364,7 @@ h6 {
         color: rgba(0, 0, 0, 0.6); }
 
 .footer {
-  padding: 55px 0;
+  padding: 45px 0;
   background: linear-gradient(103.82deg, #0A1F8B -20.79%, rgba(198, 202, 228, 0) 174.26%);
   filter: drop-shadow(0px 4px 40px rgba(0, 0, 0, 0.25)); }
 
@@ -384,6 +385,46 @@ h6 {
       font-size: 18px;
       line-height: 29px;
       color: #000000; }
+
+.my-help {
+  margin-bottom: 30px; }
+  .my-help .title {
+    margin-bottom: 60px; }
+
+.help-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -60px; }
+  .help-list .item {
+    background: #F1F2F8;
+    border-radius: 10px;
+    max-width: 300px;
+    min-height: 415px;
+    padding: 32px 15px;
+    margin: 0 65px 65px;
+    position: relative; }
+    .help-list .item::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -125px;
+      transform: translate(0, -50%);
+      background-image: url("../images/hand.svg");
+      width: 143px;
+      height: 137px; }
+    .help-list .item h4 {
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 41px;
+      text-align: center;
+      margin-bottom: 16px; }
+    .help-list .item p {
+      padding: 0 20px; }
+  .help-list .item:nth-child(3)::after,
+  .help-list :nth-child(5)::after {
+    display: none; }
 
 .z-index_10 {
   position: relative;
