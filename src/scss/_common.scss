@@ -1,0 +1,196 @@
+@import "variables";
+@import "mixin";
+
+.header {
+  padding: 60px 0;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 75px 0 0;
+}
+
+.menu-navigation {
+  display: flex;
+  padding-left: 92px;
+
+  li {
+    padding: 0 70px;
+  }
+}
+
+.logo {
+  img {
+    width: 70px;
+  }
+}
+
+.icon {
+  position: relative;
+  z-index: 5;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -14px;
+    left: -9px;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: $white;
+    z-index: -1;
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    &::before {
+      background: $dark-grey;
+    }
+  }
+
+  i {
+    font-size: 24px;
+  }
+}
+
+.phone {
+  padding-left: 18px;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(87.7deg, #0A1F8B -52.14%, rgba(10, 31, 139, 0) 125.08%);
+  margin-top: -205px;
+  margin-bottom: 65px;
+}
+
+.banner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 140px 15px 20px;
+
+  .title {
+    text-align: left;
+    margin-bottom: 107px;
+
+    .title__text {
+      font-size: 64px;
+      line-height: 80px;
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.title {
+  text-align: center;
+  span {
+    display: block;
+  }
+
+  .title__text {
+    font-family: 'Marck Script', cursive;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 63px;
+    margin-bottom: 10px;
+  }
+}
+
+.socials-area {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 35px;
+
+  .line {
+    display: block;
+    width: 1.5px;
+    height: 155px;
+    background: $dark-two;
+    margin-bottom: 50px;
+  }
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  li {
+    margin-bottom: 20px;
+  }
+}
+
+.socials {
+  li:nth-child(2) {
+    .icon {
+      &::before {
+        left: -12px;
+      }
+    }
+  }
+}
+
+.about-me {
+  h3 {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 80px;
+    margin-bottom: 5px;
+  }
+
+  p {
+    margin-bottom: 25px;
+  }
+}
+
+.about-me-content {
+  margin-bottom: 120px;
+  padding: 0 75px;
+}
+
+.service-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(174, 181, 217, 0.42);
+    filter: blur(70px);
+  }
+
+  li {
+    width: 25%;
+
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 115px;
+      justify-content: space-between;
+
+      img {
+        width: 60px;
+      }
+    }
+  }
+}
+
+
+
+
+
