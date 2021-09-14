@@ -51,7 +51,7 @@ table {
   border-spacing: 0; }
 
 a {
-  color: #000000;
+  color: #000;
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }
@@ -59,7 +59,7 @@ a {
     outline: none; }
 
 i {
-  color: #000000; }
+  color: #000; }
 
 button {
   cursor: pointer;
@@ -68,7 +68,7 @@ button {
   font-family: 'El Messiri', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
-  color: #000000;
+  color: #000;
   font-size: 24px;
   line-height: 38px; }
   button:focus {
@@ -93,7 +93,7 @@ h4,
 h5,
 h6 {
   font-weight: 700;
-  color: #000000; }
+  color: #000; }
 
 .container {
   margin: 0 auto;
@@ -110,7 +110,7 @@ h6 {
   font-weight: 600;
   font-size: 16px;
   line-height: 27px;
-  color: #000000;
+  color: #000;
   border: 1px solid #C0C5E1;
   padding: 19px 61px 12px 52px; }
 
@@ -188,14 +188,17 @@ h6 {
   align-items: center;
   padding: 0 75px 0 0; }
 
+.logo img {
+  width: 70px; }
+
 .menu-navigation {
   display: flex;
   padding-left: 92px; }
   .menu-navigation li {
     padding: 0 70px; }
-
-.logo img {
-  width: 70px; }
+    .menu-navigation li a {
+      font-weight: 500;
+      line-height: 27px; }
 
 .icon {
   position: relative;
@@ -214,10 +217,10 @@ h6 {
     text-decoration: none; }
     .icon:hover::before {
       background: #F1F2F8; }
-  .icon i {
-    font-size: 24px; }
 
 .phone {
+  font-weight: 500;
+  line-height: 27px;
   padding-left: 18px; }
 
 .banner {
@@ -226,7 +229,7 @@ h6 {
   min-height: 100vh;
   background: linear-gradient(87.7deg, #0A1F8B -52.14%, rgba(10, 31, 139, 0) 125.08%);
   margin-top: -205px;
-  margin-bottom: 65px; }
+  margin-bottom: 60px; }
 
 .banner-content {
   display: flex;
@@ -251,6 +254,9 @@ h6 {
     font-size: 50px;
     line-height: 63px;
     margin-bottom: 10px; }
+  .title .title__subtitle {
+    font-weight: 400;
+    color: #1B1B1B; }
 
 .socials-area {
   display: flex;
@@ -261,7 +267,7 @@ h6 {
     display: block;
     width: 1.5px;
     height: 155px;
-    background: #000000;
+    background: #000;
     margin-bottom: 50px; }
 
 .socials {
@@ -276,17 +282,20 @@ h6 {
 
 .about-me {
   margin-bottom: 175px; }
-  .about-me h3 {
-    font-weight: 400;
-    font-size: 36px;
+  .about-me .title .title__text {
     line-height: 80px;
-    margin-bottom: 5px; }
-  .about-me p {
-    margin-bottom: 25px; }
+    margin-bottom: 0; }
 
 .about-me-content {
   margin-bottom: 120px;
   padding: 0 74px; }
+  .about-me-content h3 {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 80px;
+    margin-bottom: 5px; }
+  .about-me-content p {
+    margin-bottom: 25px; }
 
 .service-list {
   display: flex;
@@ -314,77 +323,10 @@ h6 {
       justify-content: space-between; }
       .service-list li a img {
         width: 60px; }
+      .service-list li a span {
+        color: #000; }
     .service-list li:hover {
       cursor: pointer; }
-
-.communication {
-  margin-bottom: 45px; }
-  .communication .title {
-    margin-bottom: 25px; }
-  .communication p {
-    text-align: center;
-    font-size: 15px;
-    line-height: 24px;
-    color: #000000;
-    margin-bottom: 165px; }
-  .communication .socials li {
-    margin: 0 37px; }
-    .communication .socials li .icon::before {
-      background: #F6F7FA;
-      top: -26px;
-      left: -14px;
-      width: 60px;
-      height: 60px; }
-    .communication .socials li .icon:hover::before {
-      background: #d0d3db; }
-
-.form-area {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: rgba(255, 255, 255, 0.65);
-  border: 1px solid rgba(95, 108, 179, 0.56);
-  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.25);
-  border-radius: 10px;
-  padding: 113px 38px;
-  margin-bottom: 22px; }
-  .form-area .form-group {
-    width: 295px; }
-    .form-area .form-group input {
-      background: rgba(255, 255, 255, 0.8);
-      border: 1px solid #C0C5E1;
-      height: 60px;
-      width: 100%;
-      padding: 13px 15px; }
-      .form-area .form-group input::placeholder {
-        font-family: 'El Messiri', sans-serif;
-        font-weight: 400;
-        font-size: 17px;
-        line-height: 17px;
-        color: rgba(0, 0, 0, 0.6); }
-
-.footer {
-  padding: 45px 0;
-  background: linear-gradient(103.82deg, #0A1F8B -20.79%, rgba(198, 202, 228, 0) 174.26%);
-  filter: drop-shadow(0px 4px 40px rgba(0, 0, 0, 0.25)); }
-
-.footer-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-  .footer-content .contacts {
-    display: flex;
-    align-items: center; }
-    .footer-content .contacts p {
-      font-size: 24px;
-      line-height: 38px;
-      color: #000000;
-      padding-right: 38px;
-      flex-wrap: wrap; }
-    .footer-content .contacts a {
-      font-size: 18px;
-      line-height: 29px;
-      color: #000000; }
 
 .my-help {
   margin-bottom: 30px; }
@@ -426,12 +368,88 @@ h6 {
   .help-list :nth-child(5)::after {
     display: none; }
 
+.communication {
+  margin-bottom: 45px; }
+  .communication .title {
+    margin-bottom: 25px; }
+    .communication .title .title__subtitle {
+      font-weight: 500;
+      line-height: 27px;
+      color: #000; }
+  .communication p {
+    text-align: center;
+    font-size: 15px;
+    line-height: 24px;
+    color: #000;
+    margin-bottom: 165px; }
+  .communication .socials li {
+    margin: 0 37px; }
+    .communication .socials li .icon::before {
+      background: #F6F7FA;
+      top: -26px;
+      left: -14px;
+      width: 60px;
+      height: 60px; }
+    .communication .socials li .icon:hover::before {
+      background: #d0d3db; }
+
+.form-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(95, 108, 179, 0.56);
+  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding: 113px 38px;
+  margin-bottom: 22px; }
+  .form-area .form-group {
+    width: 295px; }
+    .form-area .form-group input {
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid #C0C5E1;
+      height: 60px;
+      width: 100%;
+      padding: 13px 15px; }
+      .form-area .form-group input::placeholder {
+        font-family: 'El Messiri', sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 17px;
+        color: rgba(0, 0, 0, 0.6);
+        opacity: 0.8; }
+
+.footer {
+  padding: 45px 0;
+  background: linear-gradient(103.82deg, #0A1F8B -20.79%, rgba(198, 202, 228, 0) 174.26%);
+  filter: drop-shadow(0px 4px 40px rgba(0, 0, 0, 0.25)); }
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .footer-content .contacts {
+    display: flex;
+    align-items: center; }
+    .footer-content .contacts p {
+      font-size: 24px;
+      line-height: 38px;
+      color: #000;
+      padding-right: 38px; }
+    .footer-content .contacts a {
+      font-size: 18px;
+      line-height: 29px;
+      color: #000; }
+
 .z-index_10 {
   position: relative;
   z-index: 10; }
 
 .fz_28 i {
   font-size: 28px; }
+
+.fz_24 i {
+  font-size: 24px; }
 
 .fz_36 i {
   font-size: 36px; }
