@@ -1,87 +1,6 @@
 @import "variables";
 @import "mixin";
 
-.header {
-  padding: 60px 0;
-
-  @include breakpoint($tablet) {
-    padding: 20px 0;
-  }
-}
-
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 83px 0 0;
-
-  @include breakpoint($desktop) {
-    padding: 0;
-  }
-
-  @include breakpoint($mobile) {
-    position: relative;
-  }
-}
-
-.logo {
-  img {
-    width: 70px;
-
-    @include breakpoint($mobile) {
-      width: 45px;
-    }
-  }
-}
-
-.holder-phone {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 7px;
-
-  .icon {
-    &::before {
-      top: -10px;
-      left: -10px;
-    }
-  }
-
-  @include breakpoint($mobile) {
-    display: none;
-  }
-}
-
-.menu-navigation {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 92px;
-  padding-top: 18px;
-  flex-wrap: wrap;
-  min-width: 570px;
-
-  @include breakpoint($desktop) {
-    padding: 0;
-  }
-
-  @include breakpoint($tablet) {
-    min-width: 400px;
-  }
-
-  @include breakpoint($mobile) {
-    display: none;
-  }
-
-  li {
-    width: 17.3%;
-    a {
-      font-weight: 500;
-      line-height: 27px;
-    }
-  }
-}
-
 .icon {
   display: block;
   position: relative;
@@ -194,7 +113,7 @@
       }
     }
 
-    .subtitle {
+    .title-text {
       margin-bottom: 108px;
       text-align: left;
 
@@ -247,7 +166,7 @@
     }
   }
 
-  .subtitle {
+  .title-text {
     font-weight: 400;
     color: $dark-one;
     text-align: center;
@@ -647,50 +566,6 @@
     }
   }
 }
-
-.footer {
-  padding: 45px 0;
-  background: linear-gradient(169deg, #0A1F8B -50.79%, rgba(198, 202, 228, 0) 159.26%);
-
-  @include breakpoint($mobile) {
-    padding: 15px 0;
-  }
-}
-
-.footer-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  @include breakpoint($mobile) {
-    flex-direction: column;
-  }
-
-  .contacts {
-    display: flex;
-    align-items: center;
-
-    p {
-      font-size: 24px;
-      line-height: 38px;
-      color: $dark-two;
-      padding-right: 38px;
-
-      @include breakpoint($mobile) {
-        font-size: 22px;
-        line-height: 30px;
-      }
-    }
-
-    a {
-      font-size: 18px;
-      line-height: 29px;
-      color: $dark-two;
-    }
-  }
-}
-
 
 
 

@@ -1,6 +1,87 @@
 @import "variables";
 @import "mixin";
 
+.header {
+  padding: 60px 0;
+
+  @include breakpoint($tablet) {
+    padding: 20px 0;
+  }
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 83px 0 0;
+
+  @include breakpoint($desktop) {
+    padding: 0;
+  }
+
+  @include breakpoint($mobile) {
+    position: relative;
+  }
+}
+
+.logo {
+  img {
+    width: 70px;
+
+    @include breakpoint($mobile) {
+      width: 45px;
+    }
+  }
+}
+
+.menu-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 92px;
+  padding-top: 18px;
+  flex-wrap: wrap;
+  min-width: 570px;
+
+  @include breakpoint($desktop) {
+    padding: 0;
+  }
+
+  @include breakpoint($tablet) {
+    min-width: 400px;
+  }
+
+  @include breakpoint($mobile) {
+    display: none;
+  }
+
+  li {
+    width: 17.3%;
+    a {
+      font-weight: 500;
+      line-height: 27px;
+    }
+  }
+}
+
+.holder-phone {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 7px;
+
+  .icon {
+    &::before {
+      top: -10px;
+      left: -10px;
+    }
+  }
+
+  @include breakpoint($mobile) {
+    display: none;
+  }
+}
+
 .mobile-menu-navigation {
   position: fixed;
   z-index: 25;

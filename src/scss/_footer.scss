@@ -1,0 +1,45 @@
+@import "variables";
+@import "mixin";
+
+.footer {
+  padding: 45px 0;
+  background: linear-gradient(169deg, #0A1F8B -50.79%, rgba(198, 202, 228, 0) 159.26%);
+
+  @include breakpoint($mobile) {
+    padding: 15px 0;
+  }
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include breakpoint($mobile) {
+    flex-direction: column;
+  }
+
+  .contacts {
+    display: flex;
+    align-items: center;
+
+    p {
+      font-size: 24px;
+      line-height: 38px;
+      color: $dark-two;
+      padding-right: 38px;
+
+      @include breakpoint($mobile) {
+        font-size: 22px;
+        line-height: 30px;
+      }
+    }
+
+    a {
+      font-size: 18px;
+      line-height: 29px;
+      color: $dark-two;
+    }
+  }
+}
