@@ -32,7 +32,8 @@
 
   .holder-phone {
     @include breakpoint($mobile) {
-      display: block;
+      display: flex;
+      justify-content: center;
     }
   }
 }

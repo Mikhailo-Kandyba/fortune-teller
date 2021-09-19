@@ -5,21 +5,29 @@
   z-index: 10;
 }
 
-.fz_28 {
-  i {
-    font-size: 28px;
+.z-index_img {
+  img {
+    position: relative;
+    z-index: 5;
   }
 }
 
-.fz_24 {
-  i {
-    font-size: 24px;
+.img-width_25 {
+  img {
+    width: 25px;
   }
 }
 
-.fz_36 {
-  i {
-    font-size: 36px;
+.img-width_29 {
+  img {
+    width: 29px;
+  }
+}
+
+.icon_position {
+  img {
+    padding: 3px 0;
+    width: 19px;
   }
 }
 
