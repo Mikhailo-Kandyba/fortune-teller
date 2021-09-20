@@ -31,6 +31,10 @@
   }
 }
 
+.icon_sm {
+  padding: 8px 9px 0 9px;
+}
+
 .input_sm {
   width: 192px !important;
 
@@ -44,3 +48,8 @@
   flex-direction: inherit;
   justify-content: center;
 }
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
