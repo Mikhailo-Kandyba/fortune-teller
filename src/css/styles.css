@@ -279,6 +279,9 @@ h6 {
     top: 30px;
     transform: translateY(-8px) translateX(0) rotate(-45deg); }
 
+.none .mobile-menu-navigation {
+  display: none; }
+
 .icon {
   display: block;
   border-radius: 50%;
