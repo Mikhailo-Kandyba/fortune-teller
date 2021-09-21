@@ -97,6 +97,7 @@ h6 {
   width: 100%; }
 
 .btn-link {
+  display: inline-block;
   font-family: 'El Messiri', sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -170,29 +171,28 @@ h6 {
   @media only screen and (max-width: 1023px) {
     .menu-navigation-wrap {
       max-width: 430px; } }
-
-.menu-navigation {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  width: 100%; }
-  @media only screen and (max-width: 1190px) {
-    .menu-navigation {
-      padding: 0; } }
-  @media only screen and (max-width: 1023px) {
-    .menu-navigation {
-      min-width: 400px; } }
-  @media only screen and (max-width: 767px) {
-    .menu-navigation {
-      display: none; } }
-  .menu-navigation li {
-    min-width: 25%;
-    padding: 0 10px;
-    text-align: center; }
-    .menu-navigation li a {
-      font-weight: 500;
-      line-height: 27px; }
+  .menu-navigation-wrap .menu-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 100%; }
+    @media only screen and (max-width: 1190px) {
+      .menu-navigation-wrap .menu-navigation {
+        padding: 0; } }
+    @media only screen and (max-width: 1023px) {
+      .menu-navigation-wrap .menu-navigation {
+        min-width: 400px; } }
+    @media only screen and (max-width: 767px) {
+      .menu-navigation-wrap .menu-navigation {
+        display: none; } }
+    .menu-navigation-wrap .menu-navigation li {
+      min-width: 25%;
+      padding: 0 10px;
+      text-align: center; }
+      .menu-navigation-wrap .menu-navigation li a {
+        font-weight: 500;
+        line-height: 27px; }
 
 .holder-phone {
   display: flex;
@@ -212,17 +212,17 @@ h6 {
   right: 200%;
   width: 100%;
   transition: all .25s ease; }
-  .mobile-menu-navigation .navigation {
+  .mobile-menu-navigation .menu-navigation {
     display: block;
     padding: 80px 40px;
     background: #5A68B1;
     min-height: 100vh; }
-    .mobile-menu-navigation .navigation li {
+    .mobile-menu-navigation .menu-navigation li {
       position: relative;
       text-align: center;
       margin-bottom: 30px; }
     @media only screen and (max-width: 767px) {
-      .mobile-menu-navigation .navigation .phone-item {
+      .mobile-menu-navigation .menu-navigation .phone-item {
         padding: 20px 0;
         border-top: solid 1px #000;
         border-bottom: solid 1px #000; } }
@@ -319,11 +319,11 @@ h6 {
 .banner-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 0 23px 0 24px; }
   @media only screen and (max-width: 1190px) {
     .banner-content {
-      padding: 0 15px; } }
+      padding: 0 15px;
+      align-items: center; } }
   @media only screen and (max-width: 1023px) {
     .banner-content {
       justify-content: flex-start; } }

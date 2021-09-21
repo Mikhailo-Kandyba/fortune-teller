@@ -51,11 +51,11 @@
 .banner-content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 0 23px 0 24px;
 
   @include breakpoint($desktop) {
     padding: 0 15px;
+    align-items: center;
   }
 
   @include breakpoint($tablet) {

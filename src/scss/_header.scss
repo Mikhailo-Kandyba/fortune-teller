@@ -47,37 +47,38 @@
   @include breakpoint($tablet) {
     max-width: 430px;
   }
-}
 
-.menu-navigation {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  width: 100%;
+  .menu-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 100%;
 
-  @include breakpoint($desktop) {
-    padding: 0;
-  }
+    @include breakpoint($desktop) {
+      padding: 0;
+    }
 
-  @include breakpoint($tablet) {
-    min-width: 400px;
-  }
+    @include breakpoint($tablet) {
+      min-width: 400px;
+    }
 
-  @include breakpoint($mobile) {
-    display: none;
-  }
+    @include breakpoint($mobile) {
+      display: none;
+    }
 
-  li {
-    min-width: 25%;
-    padding: 0 10px;
-    text-align: center;
+    li {
+      min-width: 25%;
+      padding: 0 10px;
+      text-align: center;
 
-    a {
-      font-weight: 500;
-      line-height: 27px;
+      a {
+        font-weight: 500;
+        line-height: 27px;
+      }
     }
   }
+
 }
 
 .holder-phone {
@@ -105,7 +106,7 @@
   width: 100%;
   transition: all .25s ease;
 
-  .navigation {
+  .menu-navigation {
     display: block;
     padding: 80px 40px;
     background: $blue;
