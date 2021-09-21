@@ -167,10 +167,19 @@ h6 {
   max-width: 750px; }
   @media only screen and (max-width: 1190px) {
     .menu-navigation-wrap {
-      max-width: 730px; } }
+      max-width: 720px; } }
   @media only screen and (max-width: 1023px) {
     .menu-navigation-wrap {
       max-width: 430px; } }
+  @media only screen and (max-width: 767px) {
+    .menu-navigation-wrap {
+      position: fixed;
+      z-index: 25;
+      top: 0;
+      right: 200%;
+      width: 100%;
+      transition: all .25s ease;
+      max-width: inherit; } }
   .menu-navigation-wrap .menu-navigation {
     display: flex;
     align-items: center;
@@ -185,14 +194,36 @@ h6 {
         min-width: 400px; } }
     @media only screen and (max-width: 767px) {
       .menu-navigation-wrap .menu-navigation {
-        display: none; } }
+        display: block;
+        padding: 80px 40px;
+        background: #5A68B1;
+        min-height: 100vh;
+        min-width: inherit; } }
     .menu-navigation-wrap .menu-navigation li {
       min-width: 25%;
       padding: 0 10px;
       text-align: center; }
+      @media only screen and (max-width: 767px) {
+        .menu-navigation-wrap .menu-navigation li {
+          position: relative;
+          margin-bottom: 30px;
+          padding: 0; } }
       .menu-navigation-wrap .menu-navigation li a {
         font-weight: 500;
         line-height: 27px; }
+      @media only screen and (max-width: 767px) {
+        .menu-navigation-wrap .menu-navigation li .holder-phone {
+          display: flex;
+          align-items: center;
+          justify-content: center; } }
+    .menu-navigation-wrap .menu-navigation .phone-item {
+      display: none; }
+      @media only screen and (max-width: 767px) {
+        .menu-navigation-wrap .menu-navigation .phone-item {
+          display: block;
+          padding: 20px 0;
+          border-top: solid 1px #000;
+          border-bottom: solid 1px #000; } }
 
 .holder-phone {
   display: flex;
@@ -205,41 +236,15 @@ h6 {
     .holder-phone {
       display: none; } }
 
-.mobile-menu-navigation {
-  position: fixed;
-  z-index: 25;
-  top: 0;
-  right: 200%;
-  width: 100%;
-  transition: all .25s ease; }
-  .mobile-menu-navigation .menu-navigation {
-    display: block;
-    padding: 80px 40px;
-    background: #5A68B1;
-    min-height: 100vh; }
-    .mobile-menu-navigation .menu-navigation li {
-      position: relative;
-      text-align: center;
-      margin-bottom: 30px; }
-    @media only screen and (max-width: 767px) {
-      .mobile-menu-navigation .menu-navigation .phone-item {
-        padding: 20px 0;
-        border-top: solid 1px #000;
-        border-bottom: solid 1px #000; } }
-  @media only screen and (max-width: 767px) {
-    .mobile-menu-navigation .holder-phone {
-      display: flex;
-      justify-content: center; } }
-
-.show-menu {
-  right: 0; }
+@media only screen and (max-width: 767px) {
+  .show-menu {
+    right: 0; } }
 
 .btn-menu {
   display: none;
   position: absolute;
-  top: 0;
+  top: 6px;
   right: 0;
-  height: 35px;
   width: 28px;
   cursor: pointer;
   transition: all .25s ease;
@@ -247,15 +252,6 @@ h6 {
   @media only screen and (max-width: 767px) {
     .btn-menu {
       display: block; } }
-  .btn-menu::before {
-    content: "";
-    position: absolute;
-    top: 4px;
-    left: -10px;
-    right: -10px;
-    bottom: -7px;
-    z-index: -1;
-    border-radius: 50%; }
   .btn-menu span {
     background: #000;
     border: none;
@@ -278,9 +274,6 @@ h6 {
   .btn-menu.active .bottom {
     top: 30px;
     transform: translateY(-8px) translateX(0) rotate(-45deg); }
-
-.none .mobile-menu-navigation {
-  display: none; }
 
 .icon {
   display: block;
