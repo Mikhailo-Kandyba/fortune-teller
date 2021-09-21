@@ -25,6 +25,8 @@
 }
 
 .logo {
+  display: flex;
+
   img {
     width: 70px;
 
@@ -145,8 +147,9 @@
 .btn-menu {
   display: none;
   position: absolute;
-  top: 6px;
+  top: 14px;
   right: 0;
+  height: 22px;
   width: 28px;
   cursor: pointer;
   transition: all .25s ease;
@@ -162,24 +165,30 @@
     height: 2px;
     width: 100%;
     position: absolute;
-    top: 16px;
+    top: 0;
     left: 0;
     transition: all .35s ease;
     cursor: pointer;
   }
 
   .middle {
-    top: 22px;
+    transform: translate(0, -50%);
+    top: 50%;
   }
 
   .bottom {
-    top: 28px;
+    top: auto;
+    bottom: 0;
+  }
+
+  .top {
+    bottom: 0;
   }
 
   &.active {
     .top {
       transform: translateY(8px) translateX(0) rotate(45deg);
-      top: 14px;
+      top: 0;
     }
 
     .middle {
@@ -187,7 +196,7 @@
     }
 
     .bottom {
-      top: 30px;
+      bottom: 4px;
       transform: translateY(-8px) translateX(0) rotate(-45deg);
     }
   }

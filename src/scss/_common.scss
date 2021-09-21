@@ -2,9 +2,9 @@
 @import "mixin";
 
 .icon {
-  display: block;
+  display: inline-flex;
   border-radius: 50%;
-  padding: 10px 11px 1px 9px;
+  padding: 10px;
   background: $white;
 
   img {
@@ -18,7 +18,7 @@
 }
 
 .phone {
-  display: block;
+  padding-top: 5px;
   font-weight: 500;
   line-height: 27px;
   padding-left: 9px;
@@ -204,14 +204,24 @@
   li {
     margin-bottom: 9px;
 
-    @include breakpoint($mobile) {
-      padding: 0 20px;
-
+    @include breakpoint($desktop) {
       &:nth-child(3) {
         .icon {
-          padding: 8px 13px 0 9px;
+          padding: 8px 10px 7px 7px;
         }
       }
+    }
+
+    @include breakpoint($tablet) {
+      &:nth-child(3) {
+        .icon {
+          padding: 8px 10px 7px 8px;
+        }
+      }
+    }
+
+    @include breakpoint($mobile) {
+      padding: 0 20px;
     }
   }
 }
@@ -485,24 +495,22 @@
 
   .socials {
     li {
-      margin: 0 35px;
+      margin: 0 20px;
+
+      @include breakpoint($desktop) {
+        &:nth-child(3) {
+          .icon {
+            padding: 15px 18px 15px 15px;
+          }
+        }
+      }
 
       @include breakpoint($mobile) {
         margin: 0 15px;
-      }
 
-      .icon {
-        &::before {
-          background: $lactic;
-          top: -16px;
-          left: -16px;
-          width: 60px;
-          height: 60px;
-        }
-
-        &:hover {
-          &::before {
-            background: $silver;
+        &:nth-child(3) {
+          .icon {
+            padding: 15px 18px 15px 15px;
           }
         }
       }

@@ -154,11 +154,13 @@ h6 {
     .header-content {
       position: relative; } }
 
-.logo img {
-  width: 70px; }
-  @media only screen and (max-width: 767px) {
-    .logo img {
-      width: 45px; } }
+.logo {
+  display: flex; }
+  .logo img {
+    width: 70px; }
+    @media only screen and (max-width: 767px) {
+      .logo img {
+        width: 45px; } }
 
 .menu-navigation-wrap {
   display: flex;
@@ -243,8 +245,9 @@ h6 {
 .btn-menu {
   display: none;
   position: absolute;
-  top: 6px;
+  top: 14px;
   right: 0;
+  height: 22px;
   width: 28px;
   cursor: pointer;
   transition: all .25s ease;
@@ -258,27 +261,31 @@ h6 {
     height: 2px;
     width: 100%;
     position: absolute;
-    top: 16px;
+    top: 0;
     left: 0;
     transition: all .35s ease;
     cursor: pointer; }
   .btn-menu .middle {
-    top: 22px; }
+    transform: translate(0, -50%);
+    top: 50%; }
   .btn-menu .bottom {
-    top: 28px; }
+    top: auto;
+    bottom: 0; }
+  .btn-menu .top {
+    bottom: 0; }
   .btn-menu.active .top {
     transform: translateY(8px) translateX(0) rotate(45deg);
-    top: 14px; }
+    top: 0; }
   .btn-menu.active .middle {
     opacity: 0; }
   .btn-menu.active .bottom {
-    top: 30px;
+    bottom: 4px;
     transform: translateY(-8px) translateX(0) rotate(-45deg); }
 
 .icon {
-  display: block;
+  display: inline-flex;
   border-radius: 50%;
-  padding: 10px 11px 1px 9px;
+  padding: 10px;
   background: #fff; }
   .icon img {
     width: 20px; }
@@ -287,7 +294,7 @@ h6 {
     background: #F1F2F8; }
 
 .phone {
-  display: block;
+  padding-top: 5px;
   font-weight: 500;
   line-height: 27px;
   padding-left: 9px; }
@@ -430,11 +437,15 @@ h6 {
       flex-direction: row; } }
   .socials li {
     margin-bottom: 9px; }
+    @media only screen and (max-width: 1190px) {
+      .socials li:nth-child(3) .icon {
+        padding: 8px 10px 7px 7px; } }
+    @media only screen and (max-width: 1023px) {
+      .socials li:nth-child(3) .icon {
+        padding: 8px 10px 7px 8px; } }
     @media only screen and (max-width: 767px) {
       .socials li {
-        padding: 0 20px; }
-        .socials li:nth-child(3) .icon {
-          padding: 8px 13px 0 9px; } }
+        padding: 0 20px; } }
 
 .about-me {
   margin-bottom: 170px; }
@@ -623,18 +634,15 @@ h6 {
           font-size: 26px;
           margin-bottom: 5px; } }
   .communication .socials li {
-    margin: 0 35px; }
+    margin: 0 20px; }
+    @media only screen and (max-width: 1190px) {
+      .communication .socials li:nth-child(3) .icon {
+        padding: 15px 18px 15px 15px; } }
     @media only screen and (max-width: 767px) {
       .communication .socials li {
-        margin: 0 15px; } }
-    .communication .socials li .icon::before {
-      background: #F6F7FA;
-      top: -16px;
-      left: -16px;
-      width: 60px;
-      height: 60px; }
-    .communication .socials li .icon:hover::before {
-      background: #d0d3db; }
+        margin: 0 15px; }
+        .communication .socials li:nth-child(3) .icon {
+          padding: 15px 18px 15px 15px; } }
   .communication .form-area {
     display: flex;
     align-items: center;
@@ -733,12 +741,17 @@ h6 {
 .img-width_29 img {
   width: 29px; }
 
-.icon_position img {
-  padding: 3px 0;
-  width: 19px; }
+.icon_img-24 img {
+  width: 24px; }
 
-.icon_sm {
-  padding: 8px 9px 0 9px; }
+.icon_s {
+  padding: 8px; }
+
+.icon_md {
+  padding: 15px; }
+
+.icon_ld {
+  padding: 15px 18px 15px 15px; }
 
 .input_sm {
   width: 192px !important; }
@@ -749,7 +762,8 @@ h6 {
 .display_flex {
   display: flex;
   flex-direction: inherit;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
 
 .overflow-hidden {
   overflow: hidden; }
