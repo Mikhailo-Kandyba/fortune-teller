@@ -97,6 +97,10 @@
       a {
         font-weight: 500;
         line-height: 27px;
+
+        @include breakpoint($mobile) {
+          display: block;
+        }
       }
 
       .holder-phone {
@@ -104,6 +108,10 @@
           display: flex;
           align-items: center;
           justify-content: center;
+        }
+
+        .icon {
+          display: inline-flex;
         }
       }
     }
@@ -186,6 +194,7 @@
   }
 
   &.active {
+    background: transparent;
     .top {
       transform: translateY(8px) translateX(0) rotate(45deg);
       top: 0;

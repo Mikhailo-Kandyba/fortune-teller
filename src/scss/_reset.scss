@@ -87,6 +87,15 @@ button {
   }
 }
 
+.btn-menu {
+  background: transparent;
+  padding: 0;
+
+  &:hover {
+    background: transparent;
+  }
+}
+
 img {
   width: 100%;
   height: auto;

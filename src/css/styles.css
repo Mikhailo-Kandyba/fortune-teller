@@ -71,6 +71,12 @@ button {
   button:hover {
     background: #F1F2F8; }
 
+.btn-menu {
+  background: transparent;
+  padding: 0; }
+  .btn-menu:hover {
+    background: transparent; }
+
 img {
   width: 100%;
   height: auto; }
@@ -213,11 +219,16 @@ h6 {
       .menu-navigation-wrap .menu-navigation li a {
         font-weight: 500;
         line-height: 27px; }
+        @media only screen and (max-width: 767px) {
+          .menu-navigation-wrap .menu-navigation li a {
+            display: block; } }
       @media only screen and (max-width: 767px) {
         .menu-navigation-wrap .menu-navigation li .holder-phone {
           display: flex;
           align-items: center;
           justify-content: center; } }
+      .menu-navigation-wrap .menu-navigation li .holder-phone .icon {
+        display: inline-flex; }
     .menu-navigation-wrap .menu-navigation .phone-item {
       display: none; }
       @media only screen and (max-width: 767px) {
@@ -273,14 +284,16 @@ h6 {
     bottom: 0; }
   .btn-menu .top {
     bottom: 0; }
-  .btn-menu.active .top {
-    transform: translateY(8px) translateX(0) rotate(45deg);
-    top: 0; }
-  .btn-menu.active .middle {
-    opacity: 0; }
-  .btn-menu.active .bottom {
-    bottom: 4px;
-    transform: translateY(-8px) translateX(0) rotate(-45deg); }
+  .btn-menu.active {
+    background: transparent; }
+    .btn-menu.active .top {
+      transform: translateY(8px) translateX(0) rotate(45deg);
+      top: 0; }
+    .btn-menu.active .middle {
+      opacity: 0; }
+    .btn-menu.active .bottom {
+      bottom: 4px;
+      transform: translateY(-8px) translateX(0) rotate(-45deg); }
 
 .icon {
   display: inline-flex;
